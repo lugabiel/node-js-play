@@ -1,12 +1,12 @@
 // class EventEmiter
-const EventEmiter = require('events');
-// object emitter declared
-const emitter = new EventEmiter();
-
+const EventEmitter = require('events');
+// class Logger
+const Logger = require('../logger-module/logger');
+// object logger declared
+const logger = new Logger();
 // create event listner .on 
-emitter.on('messageLogged', (arg) => {
+logger.on('messageLogged', (arg) => {
   console.log('listened something',arg);
 });
-// create a logger module
-const log = require('../logger-module/logger');
-log('message');
+
+logger.log('message')
